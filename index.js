@@ -12,11 +12,9 @@ const app = express();
 
 // use middleware
 app.use(express.json());
-app.use(cors({
-    origin: ["https://sangeetha-frontend.netlify.app"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true
-}));
+app.use(cors());
+    
+
 app.use("/api", userRoutes);
 app.use("/auth", authRoutes);
 app.use("/products", productRoutes);
