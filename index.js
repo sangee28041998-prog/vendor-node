@@ -20,9 +20,9 @@ app.use(cors({
 }));
     
 
-app.use("/api", userRoutes);
-app.use("/auth", authRoutes);
-app.use("/products", productRoutes);
+app.use(userRoutes);
+app.use(authRoutes);
+app.use(productRoutes);
 
 
 

@@ -6,7 +6,7 @@ const { getallProducts, getproductById, createProduct, editProduct, deleteProduc
 const authMiddleware = require("../middleware/authMiddleware");
 
 
-router.get("/", getallProducts);
+router.get("/products", getallProducts);
 router.get("/:id", authMiddleware([]), getproductById);
 router.post("/", authMiddleware(["admin"]), createProduct);
 router.put("/:id", editProduct);
