@@ -59,7 +59,7 @@ const loginUser = async (req, res) => {
         console.log(err.message);
         res.status(500).json({ message: 'User login failed' });
     }
-};
+}
 
 
 
